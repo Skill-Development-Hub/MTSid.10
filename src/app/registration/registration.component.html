@@ -63,7 +63,7 @@
               </div>
             </div>
             <label for="Address">Address(Permanent)</label><br />
-            <textarea rows="3" placeholder="Enter Address"></textarea>
+            <textarea formControlName="address" rows="3" placeholder="Enter Address"></textarea>
   
             <div class="form-div1">
               <div class="form-div-sub">
@@ -211,7 +211,7 @@
       <!-- declration ends -->
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <h5>Verify the details</h5>
+        <h3>Verify The Details:</h3>
       <div>
           <!-- ------------Form Section---------------------------------------- -->
 <!--   
@@ -291,13 +291,68 @@
             </td>
            </tr>
            <tr>
+            <th>Date Of Birth</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['DOB']}}
+            </td>
+           </tr>
+           <tr>
             <th>Course Selected</th>
             <th>:</th>
             <td>
               {{secondFormData['course']}} 
             </td>
            </tr>
-
+           <tr>
+            <th>Percentage</th>
+            <th>:</th>
+            <td>
+              {{secondFormData['percentage']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Degree</th>
+            <th>:</th>
+            <td>
+              {{secondFormData['degree']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Phone Number</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['number']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Email ID</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['mail']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Address(Permanent)</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['Address']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Parent/Guardian Contact Details</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['contact']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Total Household Income</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['income']}}
+            </td>
+           </tr>
           </table>
       </div>
       <div>

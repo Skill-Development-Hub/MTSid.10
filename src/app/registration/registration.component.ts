@@ -28,6 +28,7 @@ export class RegistrationComponent implements OnInit {
     income: '',
     Address: ''
   };
+
   secondFormData={
     course:'',
     degree:'',
@@ -44,8 +45,6 @@ export class RegistrationComponent implements OnInit {
     ) {}
 
     ngOnInit(): void{
-      
-     
       
       this.firstFormGroup = this._formBuilder.group({
         StudentId: [''],
@@ -67,7 +66,7 @@ export class RegistrationComponent implements OnInit {
       this.secondFormGroup = this._formBuilder.group({
         course: ['',Validators.required],
         degree: [''],
-        collage: [''],
+        college: [''],
         passing: [''],
         percentage: [''],
       });
@@ -82,6 +81,8 @@ export class RegistrationComponent implements OnInit {
 
     dataverify() {
       console.log(this.firstFormGroup.value);
+      console.log(this.secondFormGroup.value);
+
       this.firstFormData = {
         StudentId: this.firstFormGroup.controls['StudentId'].value,
         date: this.firstFormGroup.controls['date'].value,
@@ -112,7 +113,7 @@ export class RegistrationComponent implements OnInit {
 
   submit() {
     // console.log(this.firstFormGroup.controls['fisrtName'].value);
-console.log("registered Successfully");
+console.log("Registered Successfully");
     
 
   }
