@@ -141,6 +141,7 @@
       <!-- declrations start -->
       <mat-step [stepControl]="thirdFormGroup" label="Declration">
         <form [formGroup]="thirdFormGroup">
+          >
           <!-- ------------Form Section---------------------------------------- -->
   
           <div class="form-section">
@@ -185,7 +186,7 @@
   
             <div class="">
               <span class="upload">
-                Upload Photo <input type="file" name="photo">
+                Upload Photo <input type="file" name="photo" formControlName="photo" (change)="fileChangeEvent($event)">
               </span>
               <span class="upload">
                 Upload Adhaar <input type="file" name="aadhaar">

@@ -75,14 +75,20 @@ export class RegistrationComponent implements OnInit {
         signiture: ['',Validators.required],
         parent_signiture: ['',Validators.required],
         pdate: ['',Validators.required],
-        declare: [false, Validators.requiredTrue]
+        declare: [false, Validators.requiredTrue],
+        photo: ['']
       });
-      
     }
 
+    fileChangeEvent(event:any) {
+      console.log(this.thirdFormGroup.controls);
+      console.log(event.target.files);
+    }
+    
     dataverify() {
       console.log(this.firstFormGroup.value);
       console.log(this.secondFormGroup.value);
+      console.log(this.secondFormGroup.controls);
 
       this.firstFormData = {
         StudentId: this.firstFormGroup.controls['StudentId'].value,
