@@ -47,34 +47,35 @@ export class RegistrationComponent implements OnInit {
     ngOnInit(): void{
       
       this.firstFormGroup = this._formBuilder.group({
-        StudentId: [''],
-        date: [''],
+        StudentId: ['',Validators.required],
+        date: ['',Validators.required],
         fisrtName: ['',Validators.required],
-        middleName: [''],
-        lastName: [''],
+        middleName: ['',Validators.required],
+        lastName: ['',Validators.required],
         f_Firstname: ['',Validators.required],
-        f_Middlename: [''],
-        f_Lastname: [''],
-        DOB: [''],
-        number: [''],
-        mail: [''],
-        contact: [''],
-        income: [''],
-        address: ['']
+        f_Middlename: ['',Validators.required],
+        f_Lastname: ['',Validators.required],
+        DOB: ['',Validators.required],
+        number: ['',Validators.required],
+        mail: ['',Validators.required],
+        contact: ['',Validators.required],
+        income: ['',Validators.required],
+        address: ['',Validators.required]
 
       });
       this.secondFormGroup = this._formBuilder.group({
         course: ['',Validators.required],
-        degree: [''],
-        college: [''],
-        passing: [''],
-        percentage: [''],
+        degree: ['',Validators.required],
+        college: ['',Validators.required],
+        passing: ['',Validators.required],
+        percentage: ['',Validators.required],
       });
 
       this.thirdFormGroup = this._formBuilder.group({
-        signiture: [''],
-        parent_signiture: [''],
-        pdate: [''],
+        signiture: ['',Validators.required],
+        parent_signiture: ['',Validators.required],
+        pdate: ['',Validators.required],
+        declare: [false, Validators.requiredTrue]
       });
       
     }
